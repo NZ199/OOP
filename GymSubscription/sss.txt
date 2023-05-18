@@ -1,0 +1,81 @@
+import javax.swing.*;
+import java.awt.event.*;
+
+/**
+ *
+ * @author noufz
+ */
+public class SwingCounter extend JFrame
+{
+static int count=0:
+
+    private JPanel panel; //To reference a panel
+    private JLabel messageLabel; // To reference a label
+    private JTextField CountTextFiled;
+    private JButton CountButton; // To reference a button
+    final int WINDOW_WIDTH = 400; // Window width in pixels
+    final int WINDOW_HEIGHT = 300; // Window height in pixels
+
+public SwingCounter(){
+
+        setTitle("Swing Counter ");
+
+        // Set the size of this window.
+        setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+        // Specify what happens when the close button is clicked.
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Build the panel and add it to the frame.
+        buildPanel();
+        // Add the panel to the frame's content pane.
+        add(panel);
+        // Center the frame
+        setLocationRelativeTo(null);
+
+        // Display the window.
+        setVisible(true);
+}
+    
+private void buildPanel() {
+        // Create a JPanel object and let the panel
+        // field reference it.
+        panel = new JPanel();
+
+// Create a label to display instructions.
+
+     messageLabel = new JLabel("Counter");
+ // Create a text field 10 characters wide.
+    CountTextFiled = new JTextField(0);
+        // Create a button with the caption "Calculate".
+        CountButton = new JButton("Count");
+
+        // Add the label, text field, and button
+        // components to the panel.
+        calcButton.addActionListener(new CalcButtonListener());
+        panel.add(messageLabel);
+        panel.add( CelTextFiled );
+        panel.add(calcButton);
+
+    }
+ private class CalcButtonListener implements ActionListener {
+
+        /**
+         * The actionPerformed method executes when the user clicks on the
+         * Calculate button.
+         *
+         * @param e The event object.
+         */
+        public void actionPerformed(ActionEvent e) {
+        }
+        
+}
+
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
+}

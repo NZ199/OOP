@@ -1,0 +1,19 @@
+       calcButton.addActionListener(new ActionListener()
+        {
+               public void actionPerformed(ActionEvent e)
+               {
+                double F;
+                double C;
+                double input1;
+                double input2;
+                
+               input1 =Double.parseDouble(CTextField.getText()) ;
+               input2 =Double.parseDouble(FTextField.getText()) ;
+               if(Cradio.isSelected()){
+                  C =(9.0/5.0)*input1+32;
+                  
+               }
+               else{
+                   F=(9.0/5.0)*input2+32;
+               }
+               }
